@@ -1,0 +1,24 @@
+// === COLORS ===
+$color-text: #546e7a;
+$color-accent: #e74c3c;
+$color-accent-2: #8bc34a;
+$color-title: #263238;
+$color-gray: #f4f6f5;
+// === / COLORS ===
+
+// === FONTS ===
+@mixin roboto-regular {
+  font-family: 'Roboto-Regular';
+  font-weight: 400;
+}
+
+@mixin roboto-medium {
+  font-family: 'Roboto-Medium';
+  font-weight: 500;
+}
+
+@mixin roboto-bold {
+  font-family: 'Roboto-Bold';
+  font-weight: 700;
+}
+// === / FONTS ===
