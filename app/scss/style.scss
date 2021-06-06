@@ -1,5 +1,6 @@
-@import "vendor/normalize";
-@import "vendor/slick";
+@import "libs/normalize";
+@import "libs/slick";
+@import "libs/jquery.rateyo";
 @import "variables";
 @import "global";
 @import "fonts";
@@ -287,6 +288,8 @@
   &__item-author {
     display: flex;
     align-items: center;
+    max-width: 250px;
+
     .avatar {
       margin-right: 14px;
       display: inline-block;
@@ -304,6 +307,8 @@
   }
 
   &__item-rating {
+    display: inherit;
+    align-items: center;
     @include roboto-regular;
     font-size: 12px;
     color: #b0bec5;
@@ -313,6 +318,39 @@
   }
 }
 // === / PRODUCTS ===
+// === PRODUCT-SLIDER ===
+.product-slider {
+  padding: 110px 0 120px;
 
+  .slick-dots {
+    margin-top: 50px;
+    text-align: center;
+
+    li {
+      margin: 0 3px;
+      display: inline-block;
+
+      &.slick-active {
+        button {
+          background-color: $color-accent-2;
+        }
+      }
+    }
+
+    button {
+      width: 16px;
+      height: 16px;
+      font-size: 0;
+      background-color: rgb(232, 232, 232);
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__inner {
+  }
+}
+// === / PRODUCT-SLIDER ===
 // ADAPTIVE
 @import "media";
