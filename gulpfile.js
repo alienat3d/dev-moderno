@@ -7,6 +7,7 @@ const uglify       = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin     = require('gulp-imagemin');
 const del          = require('del');
+const cssmin       = require('gulp-cssmin');
 
 function browsersync() {
   browserSync.init({
@@ -39,11 +40,24 @@ function scripts() {
   return src([
     "node_modules/jquery/dist/jquery.js",
     "node_modules/mixitup/dist/mixitup.js",
-    "app/js/main.js",
+    "node_modules/rateyo/lib/es/rateyo.js",
+    "node_modules/slick-carousel/slick/slick.js",
+    "app/js/main.js"
   ])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"));
+}
+
+function cssLibs () {
+  return src([
+    "node_modules/normalize.css/normalize.css",
+    "node_modules/slick-carousel/slick/slick.css",
+    "node_modules/rateyo/lib/es/rateyo.css",
+  ])
+    .pipe(concat("libs.min.css"))
+    .pipe(cssmin())
+    .pipe(dest("app/css"));
 }
 
 function styles() {
@@ -75,6 +89,7 @@ function watching() {
 }
 
 exports.styles = styles;
+exports.cssLibs = cssLibs;
 exports.watching = watching;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
@@ -82,4 +97,4 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, cssLibs, scripts, browsersync, watching);
