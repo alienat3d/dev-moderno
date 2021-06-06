@@ -74,7 +74,6 @@
   &__list-link {
     @include roboto-medium;
 
-    font-weight: 500;
     font-size: 14px;
     line-height: 30px;
     color: #fff;
@@ -161,7 +160,7 @@
 
 // === PRODUCTS ===
 .products {
-  padding: 110px 0;
+  padding: $whitespace;
   background-color: $color-gray;
 
   &__control-panel {
@@ -320,7 +319,7 @@
 // === / PRODUCTS ===
 // === PRODUCT-SLIDER ===
 .product-slider {
-  padding: 110px 0 120px;
+  padding: $whitespace;
 
   .slick-dots {
     margin-top: 50px;
@@ -347,10 +346,71 @@
       cursor: pointer;
     }
   }
-
-  &__inner {
-  }
 }
 // === / PRODUCT-SLIDER ===
+// === ADVANTAGES ===
+.advantages {
+  padding: $whitespace;
+  background-color: $color-title;
+
+  &__title {
+    margin-bottom: 92px;
+    color: #fff;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    padding: 0 27px;
+    text-align: center;
+    max-width: 370px;
+  }
+  &__item:hover {
+    .advantages__item-image {
+      background-color: $color-accent-2;
+      transition: all .5s;
+    }
+    .advantages__item-title {
+      color: $color-accent-2;
+      transition: all .5s;
+    }
+  }
+
+  &__item-image {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 34px;
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all .5s;
+  }
+
+  &__icon-handshake,
+  &__icon-shield{
+    width: 84px;
+  }
+  &__icon-hq {
+    width: 74px;
+  }
+
+  &__item-title {
+    margin-bottom: 26px;
+    @include roboto-medium;
+    font-size: 24px;
+    color: #fff;
+    transition: all .5s;
+  }
+
+  &__item-text {
+    color: #b0bec5;
+  }
+}
+// === / ADVANTAGES ===
+
 // ADAPTIVE
 @import "media";
