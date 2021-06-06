@@ -1,5 +1,6 @@
-@import "vendor/normalize";
-@import "vendor/slick";
+// @import "vendor/normalize";
+// @import "vendor/slick";
+// @import "vendor/rateyo.css";
 @import "variables";
 @import "global";
 @import "fonts";
@@ -313,6 +314,17 @@
   }
 }
 // === / PRODUCTS ===
+// === PRODUCTS-SLIDER ===
+.product-slider {
+padding: 110px 0 120px;
+
+		&__title {
+		}
+
+		&__inner {
+		}
+}
+// === / PRODUCTS-SLIDER ===
 
 // ADAPTIVE
 @import "media";
