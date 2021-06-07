@@ -473,5 +473,39 @@
   }
 }
 // === / AUTHORS ===
-// ADAPTIVE
+// === TUTORIALS ===
+.tutorials {
+  padding-top: 70px;
+  padding-bottom: $whitespace-bottom;
+		&__inner {
+      display: flex;
+      justify-content: space-between;
+		}
+
+		&__item {
+      max-width: 372px;
+      width: 100%;
+		}
+
+    &__item-image{
+      min-height: 272px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+		&__item-title {
+      padding: 30px 10px;
+      display: block;
+      min-height: 100px;
+      text-align: center;
+      @include roboto-bold;
+      font-size: 24px;
+      color: $color-title;
+      background-color: #f8f8f8;
+		}
+}
+// === / TUTORIALS ===
+
+// === ADAPTIVE ===
 @import "media";
