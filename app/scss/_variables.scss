@@ -10,6 +10,7 @@ $color-accent: #e74c3c;
 $color-accent-2: #8bc34a;
 $color-title: #263238;
 $color-gray: #f4f6f5;
+$color-white: #fff;
 // === / COLORS ===
 
 // === FONTS ===
@@ -28,3 +29,7 @@ $color-gray: #f4f6f5;
   font-weight: 700;
 }
 // === / FONTS ===
+// === TRANSITION ===
+$transition-fast: all .3s;
+$transition-medium: all .5s;
+// === / TRANSITION ===

@@ -28,6 +28,10 @@
 
     span {
       color: $color-accent;
+      transition: $transition-fast;
+    }
+    span:hover {
+      color: $color-accent-2;
     }
   }
 
@@ -39,7 +43,7 @@
     padding: 4px;
     width: 72px;
     border-radius: 3px;
-    color: #fff;
+    color: $color-white;
     text-align: center;
     font-size: 12px;
 
@@ -70,13 +74,17 @@
       margin-left: 45px;
     }
   }
+  &__list-item:hover &__list-link{
+    color: $color-accent;
+  }
 
   &__list-link {
     @include roboto-medium;
 
     font-size: 14px;
     line-height: 30px;
-    color: #fff;
+    color: $color-white;
+    transition: $transition-medium;
   }
 }
 // === / HEADER ===
@@ -91,7 +99,7 @@
   &__inner {
     padding: 155px 0 100px;
     text-align: center;
-    color: #fff;
+    color: $color-white;
   }
 
   &__title {
@@ -150,10 +158,14 @@
     border: none;
     cursor: pointer;
   }
+  &__form-button:hover .search__form-icon {
+    transform: scale(1.10);
+  }
 
   &__form-icon {
     width: 20px;
     height: 20px;
+    transition: $transition-medium;
   }
 }
 // === / SEARCH ===
@@ -173,7 +185,7 @@
     @include roboto-medium;
     font-size: 14px;
     color: $color-title;
-    background-color: #fff;
+    background-color: $color-white;
     border: none;
     cursor: pointer;
     transition: all 0.5s;
@@ -189,7 +201,7 @@
     &.mixitup-control-active,
     &:hover {
       box-shadow: 0px 2px 5px 0px rgba(202, 215, 228, 0.75);
-      color: #fff;
+      color: $color-white;
       background-color: $color-accent;
       transition: all 0.5s;
     }
@@ -210,7 +222,7 @@
     padding: 18px 32px;
     font-size: 16px;
     color: $color-title;
-    background-color: #fff;
+    background-color: $color-white;
     border: none;
     box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
     cursor: pointer;
@@ -219,7 +231,7 @@
     &.mixitup-control-active,
     &:hover {
       box-shadow: 0px 2px 5px 0px rgba(202, 215, 228, 0.75);
-      color: #fff;
+      color: $color-white;
       background-color: $color-accent;
       transition: all 0.5s;
     }
@@ -232,7 +244,7 @@
     max-width: 442px;
     width: 100%;
     @include roboto-medium;
-    background-color: #fff;
+    background-color: $color-white;
     box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
   }
 
@@ -355,7 +367,7 @@
 
   &__title {
     margin-bottom: 92px;
-    color: #fff;
+    color: $color-white;
   }
 
   &__inner {
@@ -371,11 +383,12 @@
   &__item:hover {
     .advantages__item-image {
       background-color: $color-accent-2;
-      transition: all .5s;
+      transform: scale(1.1);
+      transition: $transition-medium;
     }
     .advantages__item-title {
       color: $color-accent-2;
-      transition: all .5s;
+      transition: $transition-medium;
     }
   }
 
@@ -386,12 +399,12 @@
     width: 112px;
     height: 112px;
     border-radius: 50%;
-    background-color: #fff;
-    transition: all .5s;
+    background-color: $color-white;
+    transition: $transition-medium;
   }
 
   &__icon-handshake,
-  &__icon-shield{
+  &__icon-shield {
     width: 84px;
   }
   &__icon-hq {
@@ -402,8 +415,8 @@
     margin-bottom: 26px;
     @include roboto-medium;
     font-size: 24px;
-    color: #fff;
-    transition: all .5s;
+    color: $color-white;
+    transition: $transition-medium;
   }
 
   &__item-text {
@@ -411,6 +424,54 @@
   }
 }
 // === / ADVANTAGES ===
+// === AUTHORS ===
+.authors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 750px;
+  background-image: url(../images/background-authors.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 72px 60px 82px;
+    max-width: 654px;
+    align-items: center;
+    font-size: 30px;
+    line-height: 36px;
+    color: $color-white;
+    background-color: $color-accent-2;
+  }
+
+  &__text span {
+    @include roboto-bold;
+  }
+
+  &__link {
+    margin-left: 48px;
+    display: inline-block;
+    padding: 14px 36px;
+    min-width: 226px;
+    @include roboto-regular;
+    font-size: 18px;
+    color: $color-title;
+    background-color: $color-white;
+    border: 1px solid transparent;
+    transition: $transition-medium;
+  }
+  &__link:hover {
+    color: $color-white;
+    background-color: $color-accent-2;
+    border: 1px solid $color-white;
+    border-radius: 7px;
+    transition: $transition-medium;
+  }
+}
+// === / AUTHORS ===
 // ADAPTIVE
 @import "media";
