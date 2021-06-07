@@ -74,7 +74,7 @@
       margin-left: 45px;
     }
   }
-  &__list-item:hover &__list-link{
+  &__list-item:hover &__list-link {
     color: $color-accent;
   }
 
@@ -159,7 +159,7 @@
     cursor: pointer;
   }
   &__form-button:hover .search__form-icon {
-    transform: scale(1.10);
+    transform: scale(1.1);
   }
 
   &__form-icon {
@@ -477,35 +477,127 @@
 .tutorials {
   padding-top: 70px;
   padding-bottom: $whitespace-bottom;
-		&__inner {
-      display: flex;
-      justify-content: space-between;
-		}
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
 
-		&__item {
-      max-width: 372px;
-      width: 100%;
-		}
+  &__item {
+    max-width: 372px;
+    width: 100%;
+  }
 
-    &__item-image{
-      min-height: 272px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
+  &__item-image {
+    min-height: 272px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
-		&__item-title {
-      padding: 30px 10px;
-      display: block;
-      min-height: 100px;
-      text-align: center;
-      @include roboto-bold;
-      font-size: 24px;
-      color: $color-title;
-      background-color: #f8f8f8;
-		}
+  &__item-title {
+    padding: 30px 10px;
+    display: block;
+    min-height: 100px;
+    text-align: center;
+    @include roboto-bold;
+    font-size: 24px;
+    color: $color-title;
+    background-color: #f8f8f8;
+  }
 }
 // === / TUTORIALS ===
+// === FOOTER ===
+.footer {
+  padding-top: $whitespace-bottom;
+  color: #bdb7c8;
+  background-color: $color-title;
+
+  &__content {
+    padding-bottom: 100px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    min-width: 270px;
+    color: $color-white;
+  }
+  &__column + &__column{
+    margin-left: 85px;
+  }
+
+  &__titel {
+    margin-bottom: 56px;
+    @include raleway-bold;
+    font-size: 22px;
+  }
+
+  &__text-about {
+    margin-bottom: 25px;
+    color: #b7c3c8;
+  }
+
+  &__address{
+    margin-bottom: 15px;
+    max-width: 230px;
+  }
+
+  &__address,
+  &__phone {
+    @include lato-regular;
+    font-size: 14px;
+    color: $color-white;
+  }
+
+  &__list {
+  }
+
+  &__list-item + &__list-item {
+    margin-top: 12px;
+  }
+
+  &__list-link {
+    color: #b7c3c8;
+  }
+
+  &__social {
+  }
+
+  &__social-item {
+  }
+
+  &__social-link {
+  }
+
+  &__form {
+  }
+
+  &__form-title {
+  }
+
+  &__form-input {
+    background-color: #2f3c43;
+    border: none;
+    &::placeholder {
+      color: #697378;
+    }
+  }
+
+  &__form-button {
+  }
+
+  &__copyright {
+  }
+  &__copyright-text {
+    padding: 25px 0 30px;
+    text-align: center;
+    color: #919699;
+  }
+}
+// === / FOOTER ===
 
 // === ADAPTIVE ===
 @import "media";

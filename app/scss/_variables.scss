@@ -28,6 +28,16 @@ $color-white: #fff;
   font-family: 'Roboto-Bold';
   font-weight: 700;
 }
+
+@mixin raleway-bold {
+  font-family: 'Raleway-Bold';
+  font-weight: 700;
+}
+
+@mixin lato-regular {
+  font-family: 'Lato-Regular';
+  font-weight: 400;
+}
 // === / FONTS ===
 // === TRANSITION ===
 $transition-fast: all .3s;
