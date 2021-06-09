@@ -28,15 +28,36 @@
             <a class="header__phone" href="tel:99987654321">+99 9 8765 4321</a>
           </div>
           <div class="header__box">
-            <a class="notification header__icon " href="#"></a>
-            <a class="message header__icon " href="#"></a>
-            <a class="cart header__icon " href="#"></a>
-            <a class="user" href="#"></a>
-            <a class="header__button header__button--login" href="#">Login</a>
-            <a class="header__button header__button--register" href="#">Register</a>
+            <a class="notification header__icon active icon-bell-o" href="#">
+              <span>8</span>
+            </a>
+            <a class="message header__icon active icon-envelope-o" href="#">
+              <span>5</span>
+            </a>
+            <a class="cart header__icon active icon-shopping-cart" href="#">
+              <span>8</span>
+            </a>
+            <a class="user" href="#">
+              <div class="user__inner">
+                <div class="user__image" style="background-image: url(images/content/user-login.jpg);"></div>
+                <div class="user__info">
+                  <div class="user__name">
+                    Mike Hussy
+                  </div>
+                  <div class="user__money">
+                    $171.00
+                  </div>
+                </div>
+              </div>
+            </a>
+            
           </div>
+          <a class="header__button header__button-login header__button-login--off" href="#">Login</a>
+          <a class="header__button header__button-logout header__button-login--on" href="#">Logout</a>
+          <a class="header__button header__button-register header__button-login--off" href="#">Register</a>
         </div>
       </div>
+    </div>
     </div>
 
     <div class="header__menu">
