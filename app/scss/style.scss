@@ -39,6 +39,16 @@
     margin-right: 1px;
   }
 
+  &__icon{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+
+    & + & {
+      margin-left: 15px;
+    }
+  }
+
   &__button {
     padding: 4px;
     width: 72px;
@@ -582,11 +592,6 @@
     left: 5px;
   }
 
-  &__list {
-  }
-
-  &__list-item {
-  }
   &__list-item + &__list-item {
     margin-top: 12px;
   }
