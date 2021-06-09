@@ -83,7 +83,7 @@
 
     &-login {
       background-color: $color-accent-2;
-      &--off{
+      &--off {
         display: none;
       }
     }
@@ -94,7 +94,7 @@
     }
     &-logout {
       display: none;
-      &.header__button-login--on{
+      &.header__button-login--on {
         display: block;
       }
     }
@@ -152,8 +152,8 @@
   margin-left: 20px;
   margin-right: 25px;
   padding-right: 20px;
-  &::before{
-    content: '\f107';
+  &::before {
+    content: "\f107";
     position: absolute;
     top: 0;
     right: 0;
@@ -190,6 +190,107 @@
     @include roboto-bold;
     color: $color-accent-2;
   }
+}
+.user {
+  &__box {
+    margin-top: 40px;
+    position: relative;
+    height: 90px;
+    &:hover {
+      .user__menu {
+        padding: 20px 20px 5px;
+        height: auto;
+        border-width: 1px;
+        transition: $transition-fast;
+      }
+    }
+  }
+  &__inner {
+  }
+
+  &__image {
+  }
+
+  &__info {
+  }
+
+  &__name {
+  }
+
+  &__money {
+  }
+
+  &__menu {
+    position: absolute;
+    top: 70px;
+    right: 15px;
+    padding: 0px 20px;
+    width: 158px;
+    height: 0;
+    box-shadow: 0 16px 20px 0 rgba(216, 216, 216, 0.2);
+    border: 0px solid rgb(204, 204, 204);
+    background-color: #fff;
+    overflow: hidden;
+    transition: $transition-fast;
+  }
+
+  &__menu-list {
+  }
+
+  &__menu-item {
+  }
+
+  &__menu-link {
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #546e7a;
+  }
+  &__menu-link + &__menu-link {
+  }
+}
+.cart {
+
+		&__box {
+		}
+
+		&__menu {
+		}
+
+		&__items {
+		}
+
+		&__image {
+		}
+
+		&__info {
+		}
+
+		&__info-title {
+		}
+
+		&__info-category {
+		}
+
+		&__info-price {
+		}
+
+		&__summary {
+		}
+
+		&__summary-title {
+		}
+
+		&__summary-total {
+		}
+
+		&__summary-price {
+		}
+
+		&__button {
+		}
+
+		&__button--checkout {
+		}
 }
 // === / GUI ===
 // === / HEADER ===
@@ -695,14 +796,8 @@
     display: block;
     padding-left: 22px;
     color: #b7c3c8;
-    position: relative;
     &::before {
-      content: "\f105";
-      position: absolute;
-      left: 0;
-      font-family: "icomoon";
       font-size: 18px;
-      color: $color-accent-2;
     }
   }
 

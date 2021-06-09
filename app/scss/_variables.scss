@@ -15,6 +15,11 @@ $color-orange: #ef6c00;
 $color-yellow: #fcb322;
 // === / COLORS ===
 
+// === TRANSITION ===
+$transition-fast: all .3s;
+$transition-medium: all .5s;
+// === / TRANSITION ===
+
 // === FONTS ===
 @mixin roboto-regular {
   font-family: 'Roboto-Regular';
@@ -41,7 +46,3 @@ $color-yellow: #fcb322;
   font-weight: 400;
 }
 // === / FONTS ===
-// === TRANSITION ===
-$transition-fast: all .3s;
-$transition-medium: all .5s;
-// === / TRANSITION ===
