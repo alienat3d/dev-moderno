@@ -522,17 +522,30 @@
   }
 
   &__column {
-    min-width: 270px;
+    max-width: 270px;
+    width: 100%;
     color: $color-white;
-  }
-  &__column + &__column{
-    margin-left: 85px;
+    &--menu {
+      max-width: 220px;
+    }
   }
 
   &__titel {
-    margin-bottom: 56px;
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
     @include raleway-bold;
     font-size: 22px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 1px;
+      width: 51px;
+      height: 3px;
+      background-color: $color-accent-2;
+    }
   }
 
   &__text-about {
@@ -540,58 +553,141 @@
     color: #b7c3c8;
   }
 
-  &__address{
-    margin-bottom: 15px;
-    max-width: 230px;
-  }
-
   &__address,
   &__phone {
+    position: relative;
+    padding-left: 32px;
     @include lato-regular;
-    font-size: 14px;
     color: $color-white;
+    &::before {
+      position: absolute;
+      font-family: "icomoon";
+      font-size: 18px;
+      color: $color-accent-2;
+    }
+  }
+
+  &__address {
+    margin-bottom: 15px;
+    max-width: 230px;
+    &::before {
+      content: "\f041";
+      top: 11px;
+      left: 7px;
+    }
+  }
+
+  &__phone::before {
+    content: "\f095";
+    left: 5px;
   }
 
   &__list {
   }
 
+  &__list-item {
+  }
   &__list-item + &__list-item {
     margin-top: 12px;
   }
 
   &__list-link {
+    display: block;
+    padding-left: 22px;
     color: #b7c3c8;
+    position: relative;
+    &::before {
+      content: "\f105";
+      position: absolute;
+      left: 0;
+      font-family: "icomoon";
+      font-size: 18px;
+      color: $color-accent-2;
+    }
   }
 
   &__social {
+    margin-bottom: 35px;
   }
 
   &__social-item {
+    display: inline-block;
+    & + & {
+      margin-left: 7px;
+    }
+    a {
+      width: 28px;
+      height: 28px;
+      background-image: url(../images/css_sprites.png);
+    }
   }
 
   &__social-link {
+    &--twitter {
+      background-position: -56px -0;
+    }
+    &--youtube {
+      background-position: -0 -28px;
+    }
+    &--pinterest {
+      background-position: -28px -0;
+    }
+    &--linkedin {
+      background-position: -28px -28px;
+    }
   }
 
   &__form {
+    position: relative;
   }
 
   &__form-title {
+    margin-bottom: 15px;
+    font-size: 20px;
   }
 
   &__form-input {
+    padding-left: 13px;
+    padding-right: 56px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    color: $color-white;
     background-color: #2f3c43;
+    border: none;
+
     &::placeholder {
+      font-size: 14px;
       color: #697378;
     }
   }
 
   &__form-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 43px;
+    height: 40px;
+    background-color: $color-accent-2;
+    border: none;
+    cursor: pointer;
+    &::before {
+      content: "\f124";
+      top: 8px;
+      right: 14px;
+      position: absolute;
+      font-family: "icomoon";
+      font-size: 20px;
+      color: $color-white;
+    }
   }
 
   &__copyright {
+    border-top: 1px solid #424d53;
   }
   &__copyright-text {
-    padding: 25px 0 30px;
+    padding: 25px 0;
     text-align: center;
     color: #919699;
   }
