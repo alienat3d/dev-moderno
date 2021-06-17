@@ -34,6 +34,8 @@
 
   &__box {
     margin-right: 1px;
+    display: flex;
+    align-items: center;
   }
 
   &__icon {
@@ -191,20 +193,67 @@
     color: $color-accent-2;
   }
 }
-.user {
+
+.cart {
   &__box {
-    margin-top: 40px;
-    position: relative;
-    height: 90px;
-    &:hover {
-      .user__menu {
-        padding: 20px 20px 5px;
-        height: auto;
-        border-width: 1px;
-        transition: $transition-fast;
-      }
+  }
+
+  &__menu {
+  }
+
+  &__items {
+  }
+
+  &__image {
+  }
+
+  &__info {
+  }
+
+  &__info-title {
+  }
+
+  &__info-category {
+  }
+
+  &__info-price {
+  }
+
+  &__summary {
+  }
+
+  &__summary-title {
+  }
+
+  &__summary-total {
+  }
+
+  &__summary-price {
+  }
+
+  &__button {
+  }
+
+  &__button--checkout {
+  }
+}
+.cart__box,
+.user__box {
+  margin-top: 40px;
+  position: relative;
+  height: 90px;
+  &:hover {
+    .user__menu,
+    .cart__box {
+      padding: 20px 20px 5px;
+      height: auto;
+      border-width: 1px;
+      overflow: auto;
+      transition: $transition-fast;
     }
   }
+}
+.user {
   &__inner {
   }
 
@@ -220,7 +269,8 @@
   &__money {
   }
 
-  &__menu {
+  &__menu,
+  .cart__menu {
     position: absolute;
     top: 70px;
     right: 15px;
@@ -245,50 +295,6 @@
     font-size: 12px;
     color: #546e7a;
   }
-}
-.cart {
-
-		&__box {
-		}
-
-		&__menu {
-		}
-
-		&__items {
-		}
-
-		&__image {
-		}
-
-		&__info {
-		}
-
-		&__info-title {
-		}
-
-		&__info-category {
-		}
-
-		&__info-price {
-		}
-
-		&__summary {
-		}
-
-		&__summary-title {
-		}
-
-		&__summary-total {
-		}
-
-		&__summary-price {
-		}
-
-		&__button {
-		}
-
-		&__button--checkout {
-		}
 }
 // === / GUI ===
 // === / HEADER ===
