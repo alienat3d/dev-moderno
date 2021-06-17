@@ -131,20 +131,29 @@
 }
 // === GUI ===
 .notification {
+  &__box {
+  }
+
   span {
     background-color: $color-yellow;
   }
+
+  &__menu {
+  }
 }
+
 .message {
+  &__box {
+  }
+
   span {
     background-color: $color-orange;
   }
-}
-.cart {
-  span {
-    background-color: $color-accent-2;
+
+  &__menu {
   }
 }
+
 .user {
   position: relative;
   margin-left: 20px;
@@ -219,58 +228,21 @@
 }
 
 .cart {
-  &__menu {
-    position: absolute;
-    top: 62px;
-    right: 0;
-    height: 0;
-    border-top: 1px solid #e0e0e0;
-    overflow: hidden;
+  span {
+    background-color: $color-accent-2;
   }
 
   &__box {
-    margin-top: 55px;
+    margin-top: 56px;
     margin-left: 15px;
     &:hover {
-      .cart__menu {
-        
+      .circle__menu {
+        height: auto;
+        overflow: auto;
+        border-top: 1px solid #e0e0e0;
+        transition: $transition-fast;
       }
     }
-  }
-
-  &__items {
-    padding: 23px;
-    width: 269px;
-    display: flex;
-    align-items: center;
-    border: 1px solid #e0e0e0;
-    border-top: none;
-    background-color: $color-white;
-  }
-
-  &__image {
-    margin-right: 15px;
-  }
-
-  &__info {
-    line-height: 22px;
-  }
-
-  &__info-title {
-    @include roboto-medium;
-    // TODO: check the color in layout
-    color: $color-title;
-  }
-
-  &__info-category {
-    font-size: 12px;
-    color: $color-accent-2;
-  }
-
-  &__info-price {
-    @include roboto-medium;
-    font-size: 16px;
-    color: #000;
   }
 
   &__summary {
@@ -344,6 +316,53 @@
     margin-bottom: 15px;
     font-size: 12px;
     color: #546e7a;
+  }
+}
+
+.circle {
+    &__menu {
+    position: absolute;
+    top: 62px;
+    right: 0;
+    height: 0;
+    border-top: 1px solid transparent;
+    overflow: hidden;
+    transition: $transition-fast;
+  }
+
+  &__items {
+    padding: 23px;
+    width: 269px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    background-color: $color-white;
+  }
+
+  &__image {
+    margin-right: 15px;
+  }
+
+    &__info {
+    line-height: 22px;
+  }
+
+  &__info-title {
+    @include roboto-medium;
+    // TODO: check the color in layout
+    color: $color-title;
+  }
+
+  &__info-category {
+    font-size: 12px;
+    color: $color-accent-2;
+  }
+
+  &__info-price {
+    @include roboto-medium;
+    font-size: 16px;
+    color: $color-black;
   }
 }
 // === / GUI ===
