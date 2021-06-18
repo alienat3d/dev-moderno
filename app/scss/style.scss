@@ -38,7 +38,7 @@
     align-items: center;
   }
 
-  &__icon {
+  &__circle {
     position: relative;
     display: none;
     width: 34px;
@@ -130,6 +130,19 @@
   }
 }
 // === GUI ===
+.notification__menu,
+.message__menu {
+  .circle__image {
+    margin-right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  .circle__info {
+    line-height: 18px;
+  }
+}
+
 .notification {
   &__box {
   }
@@ -159,6 +172,7 @@
   margin-left: 20px;
   margin-right: 25px;
   padding-right: 20px;
+
   &::before {
     content: "\f107";
     position: absolute;
@@ -168,6 +182,7 @@
     font-size: 16px;
     color: #707070;
   }
+
   &__inner {
     display: flex;
     align-items: center;
@@ -197,8 +212,25 @@
     @include roboto-bold;
     color: $color-accent-2;
   }
+
+  &__menu {
+    position: absolute;
+    top: 70px;
+    right: 15px;
+    padding: 0px 20px;
+    width: 158px;
+    height: 0;
+    box-shadow: 0 16px 20px 0 rgba(216, 216, 216, 0.2);
+    border: 0px solid rgb(204, 204, 204);
+    background-color: $color-white;
+    overflow: hidden;
+    transition: $transition-fast;
+  }
 }
+
 .user__box,
+.notification__box,
+.message__box,
 .cart__box {
   margin-top: 40px;
   position: relative;
@@ -213,36 +245,34 @@
     }
   }
 }
-.user__menu {
-  position: absolute;
-  top: 70px;
-  right: 15px;
-  padding: 0px 20px;
-  width: 158px;
-  height: 0;
-  box-shadow: 0 16px 20px 0 rgba(216, 216, 216, 0.2);
-  border: 0px solid rgb(204, 204, 204);
-  background-color: $color-white;
-  overflow: hidden;
-  transition: $transition-fast;
+
+.cart__box,
+.notification__box,
+.message__box {
+  margin-top: 56px;
+  margin-left: 15px;
+  &:hover {
+    .header__circle::before {
+      color: $color-title;
+    }
+
+    .circle__menu {
+      height: auto;
+      overflow: hidden;
+      border-top: 1px solid #e0e0e0;
+      transition: $transition-fast;
+    }
+
+    .circle__items {
+      padding: 23px;
+      border-width: 1px;
+    }
+  }
 }
 
 .cart {
   span {
     background-color: $color-accent-2;
-  }
-
-  &__box {
-    margin-top: 56px;
-    margin-left: 15px;
-    &:hover {
-      .circle__menu {
-        height: auto;
-        overflow: auto;
-        border-top: 1px solid #e0e0e0;
-        transition: $transition-fast;
-      }
-    }
   }
 
   &__summary {
@@ -303,9 +333,6 @@
   &__money {
   }
 
-  &__menu {
-  }
-
   &__menu-list {
   }
 
@@ -320,31 +347,42 @@
 }
 
 .circle {
-    &__menu {
+  &__menu {
     position: absolute;
     top: 62px;
     right: 0;
     height: 0;
-    border-top: 1px solid transparent;
     overflow: hidden;
     transition: $transition-fast;
   }
 
   &__items {
-    padding: 23px;
-    width: 269px;
+    position: relative;
+    padding: 0 23px;
     display: flex;
     align-items: center;
-    border: 1px solid #e0e0e0;
+    width: 269px;
+    border: 0px solid #e0e0e0;
     border-top: none;
+    border-left-width: 1px;
+    border-right-width: 1px;
     background-color: $color-white;
+    transition: $transition-fast;
+
+    &::before {
+      position: absolute;
+      top: 27px;
+      right: 29px;
+      font-size: 16px;
+      color: #b0bec5;
+    }
   }
 
   &__image {
     margin-right: 15px;
   }
 
-    &__info {
+  &__info {
     line-height: 22px;
   }
 
@@ -364,6 +402,15 @@
     font-size: 16px;
     color: $color-black;
   }
+
+  &__info-date {
+    font-size: 10px;
+    color: #707070;
+  }
+}
+
+.icons-color::before {
+  color: $color-orange;
 }
 // === / GUI ===
 // === / HEADER ===
