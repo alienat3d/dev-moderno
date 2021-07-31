@@ -294,12 +294,6 @@
     color: $color-title;
   }
 
-  &__summary-total {
-  }
-
-  &__summary-price {
-  }
-
   &__button {
     padding: 12px 5px;
     width: 103px;
@@ -318,27 +312,6 @@
 }
 
 .user {
-  &__inner {
-  }
-
-  &__image {
-  }
-
-  &__info {
-  }
-
-  &__name {
-  }
-
-  &__money {
-  }
-
-  &__menu-list {
-  }
-
-  &__menu-item {
-  }
-
   &__menu-link {
     margin-bottom: 15px;
     font-size: 12px;
@@ -1010,4 +983,7 @@
 // === / FOOTER ===
 
 // === ADAPTIVE ===
+.page-content {
+  height: 20vw;
+}
 @import "media";
