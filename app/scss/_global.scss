@@ -6,12 +6,22 @@
 html {
   box-sizing: border-box;
 }
+html,
+body {
+  height: 100%;
+}
 a {
   display: inline-block;
   text-decoration: none;
   color: $color-text;
 }
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding: 0;
   margin: 0;
 }
@@ -25,13 +35,24 @@ address {
   font-style: normal;
 }
 body {
-  font-family: "Roboto-Regular", sans-serif;
+  font-family: 'Roboto-Regular', sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
   color: $color-text;
 }
 // === REUSABLE BLOCKS & ELEMENTS ===
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -51,7 +72,7 @@ body {
   color: $color-title;
 }
 // === STAR-RATING ===
-.rate-star{
+.rate-star {
   display: inline-block;
   margin-right: 13px;
 }
@@ -60,13 +81,13 @@ body {
 .angle-right {
   position: relative;
   padding-left: 15px;
-  &::before{
-  content: "\f105";
-  position: absolute;
-  left: 0;
-  font-family: "icomoon";
-  font-size: 14px;
-  color: $color-accent-2;
+  &::before {
+    content: '\f105';
+    position: absolute;
+    left: 0;
+    font-family: 'icomoon';
+    font-size: 14px;
+    color: $color-accent-2;
   }
 }
 // === / LIST DECOR ===

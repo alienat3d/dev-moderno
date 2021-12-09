@@ -1,14 +1,15 @@
+// === MAX-WIDTH <= 1150 === //
 @media (max-width: 1150px) {
-  .footer {
-    &__inner {
-      flex-wrap: wrap;
-      
-    }
+  .footer__inner {
+    flex-wrap: wrap;
   }
 }
+// ===/ MAX-WIDTH <= 1150 === //
 
+// === MAX-WIDTH <= 720 === //
 @media (max-width: 720px) {
   .container-fluid {
     padding: 0 15px;
   }
 }
+// ===/ MAX-WIDTH <= 720 === //
