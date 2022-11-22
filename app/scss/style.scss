@@ -1,9 +1,9 @@
-@import "libs/normalize";
-@import "libs/slick";
-@import "libs/jquery.rateyo";
-@import "variables";
-@import "global";
-@import "fonts";
+@import 'libs/normalize';
+@import 'libs/slick';
+@import 'libs/jquery.rateyo';
+@import 'variables';
+@import 'global';
+@import 'fonts';
 
 // === HEADER ===
 .header {
@@ -144,26 +144,14 @@
 }
 
 .notification {
-  &__box {
-  }
-
   span {
     background-color: $color-yellow;
-  }
-
-  &__menu {
   }
 }
 
 .message {
-  &__box {
-  }
-
   span {
     background-color: $color-orange;
-  }
-
-  &__menu {
   }
 }
 
@@ -174,11 +162,11 @@
   padding-right: 20px;
 
   &::before {
-    content: "\f107";
+    content: '\f107';
     position: absolute;
     top: 0;
     right: 0;
-    font-family: "icomoon";
+    font-family: 'icomoon';
     font-size: 16px;
     color: #707070;
   }
@@ -837,7 +825,7 @@
     font-size: 22px;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       left: 1px;
@@ -860,7 +848,7 @@
     color: $color-white;
     &::before {
       position: absolute;
-      font-family: "icomoon";
+      font-family: 'icomoon';
       font-size: 18px;
       color: $color-accent-2;
     }
@@ -870,14 +858,14 @@
     margin-bottom: 15px;
     max-width: 230px;
     &::before {
-      content: "\f041";
+      content: '\f041';
       top: 11px;
       left: 7px;
     }
   }
 
   &__phone::before {
-    content: "\f095";
+    content: '\f095';
     left: 5px;
   }
 
@@ -961,11 +949,11 @@
     border: none;
     cursor: pointer;
     &::before {
-      content: "\f124";
+      content: '\f124';
       top: 8px;
       right: 14px;
       position: absolute;
-      font-family: "icomoon";
+      font-family: 'icomoon';
       font-size: 20px;
       color: $color-white;
     }
@@ -986,4 +974,4 @@
 .page-content {
   height: 20vw;
 }
-@import "media";
+@import 'media';
